@@ -28,7 +28,7 @@
 
 - The HTML of the website contains potential typos in IDs that do not always match the expected values required for tests. This caused some locators to require adjustment.
 
-- The iframe's `src` link (for payment/OTP) sometimes loads infinitely. Many element paths and interactions were performed by directly using the main page context and switching frames only when strictly necessary.
+- The iframe's `src` link (for payment/OTP) loads infinitely. All element paths and interactions were performed by directly using the main page context.
 
 - The current automation code is functional for individual feature execution, but when running all tests together using the TestNG suite (`testng.xml`), some tests may intermittently fail due to synchronization issues or test finalization steps. These will be improved and stabilized in future revisions.
 
@@ -48,9 +48,7 @@
   - Cucumber (BDD framework)
   - TestNG (test execution & grouping)
 - Framework Design:
-  - Page Object Model (POM) pattern applied
   - Separate feature files organized by functional areas
-  - TestNG suite defines regression and sanity groups
 
 ---
 
